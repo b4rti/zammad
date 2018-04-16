@@ -31,6 +31,14 @@ Rails.application.configure do
   #config.assets.debug = true
   config.assets.debug = false
 
+  # Allow CORS
+  config.middleware.insert_before 0, "Rack::Cors" do
+    allow do
+      origins '*'
+      resource '*', :headers => :any, :methods => [:get, :post, :options]
+    end
+  end
+
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(
     ActionDispatch::Static,

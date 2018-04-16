@@ -33,6 +33,9 @@ gem 'argon2'
 # performance - Memcached
 gem 'dalli'
 
+# extras - CORS headers
+gem 'rack-cors'
+
 # asset handling
 group :assets do
   # asset handling - coffee-script
