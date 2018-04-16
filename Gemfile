@@ -34,7 +34,7 @@ gem 'argon2'
 gem 'dalli'
 
 # extras - CORS headers
-gem 'rack-cors'
+gem 'rack-cors', '~> 0.3.1'
 
 # asset handling
 group :assets do
